@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sambev.mtgplus.MainActivity">
+
+    <TextView
+        style="@style/TextSize"
+        android:text="@string/player_life" />
+
+    <Button
+        style="@style/ButtonSize"
+        android:id="@+id/add_one_life"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="+"/>
+
+    <TextView
+        android:id="@+id/life_count"
+        style="@style/TextSize"
+        android:layout_toLeftOf="@id/add_one_life"
+        android:layout_toStartOf="@id/add_one_life"
+        android:text="0" />
+
+    <Button
+        style="@style/ButtonSize"
+        android:layout_toLeftOf="@id/life_count"
+        android:layout_toStartOf="@id/life_count"
+        android:text="-"/>
+</RelativeLayout>
