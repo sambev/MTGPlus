@@ -15,14 +15,13 @@
         android:text="@string/player_life" />
 
     <Button
-        style="@style/ButtonSize"
+        style="@style/AddButton"
         android:id="@+id/add_one_life"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:onClick="addLife"
         android:text="+"/>
 
     <TextView
-        android:id="@+id/life_count"
+        android:id="@+id/life_amount"
         style="@style/TextSize"
         android:layout_toLeftOf="@id/add_one_life"
         android:layout_toStartOf="@id/add_one_life"
@@ -30,7 +29,7 @@
 
     <Button
         style="@style/ButtonSize"
-        android:layout_toLeftOf="@id/life_count"
-        android:layout_toStartOf="@id/life_count"
+        android:layout_toLeftOf="@id/life_amount"
+        android:layout_toStartOf="@id/life_amount"
         android:text="-"/>
 </RelativeLayout>
