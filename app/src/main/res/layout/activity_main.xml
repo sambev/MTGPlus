@@ -31,5 +31,6 @@
         style="@style/ButtonSize"
         android:layout_toLeftOf="@id/life_amount"
         android:layout_toStartOf="@id/life_amount"
+        android:onClick="removeLife"
         android:text="-"/>
 </RelativeLayout>
