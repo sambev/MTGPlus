@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MTGPlus</string>
     <string name="player_life">PLAYER LIFE</string>
+    <string name="commander_death">COM. DEATH</string>
 </resources>

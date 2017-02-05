@@ -10,7 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.sambev.mtgplus.MainActivity">
 
+    <!-- ******************************************* -->
+    <!-- Player Life -->
+    <!-- ******************************************* -->
     <TextView
+        android:id="@+id/player_life_label"
         style="@style/TextSize"
         android:text="@string/player_life" />
 
@@ -25,12 +29,44 @@
         style="@style/TextSize"
         android:layout_toLeftOf="@id/add_one_life"
         android:layout_toStartOf="@id/add_one_life"
-        android:text="0" />
+        android:text="40" />
 
     <Button
+        android:id="@+id/remove_one_life"
         style="@style/ButtonSize"
         android:layout_toLeftOf="@id/life_amount"
         android:layout_toStartOf="@id/life_amount"
         android:onClick="removeLife"
+        android:text="-"/>
+
+    <!-- ******************************************* -->
+    <!-- Commander Deaths -->
+    <!-- ******************************************* -->
+    <TextView
+        style="@style/TextSize"
+        android:layout_below="@id/player_life_label"
+        android:text="@string/commander_death" />
+
+    <Button
+        style="@style/AddButton"
+        android:id="@+id/add_one_cdeath"
+        android:layout_below="@id/add_one_life"
+        android:onClick="addCommanderDeathCount"
+        android:text="+"/>
+
+    <TextView
+        android:id="@+id/cdeath_count"
+        style="@style/TextSize"
+        android:layout_toLeftOf="@id/add_one_cdeath"
+        android:layout_toStartOf="@id/add_one_cdeath"
+        android:layout_below="@id/life_amount"
+        android:text="0" />
+
+    <Button
+        style="@style/ButtonSize"
+        android:layout_below="@id/remove_one_life"
+        android:layout_toLeftOf="@id/cdeath_count"
+        android:layout_toStartOf="@id/cdeath_count"
+        android:onClick="removeCommanderDeath"
         android:text="-"/>
 </RelativeLayout>
