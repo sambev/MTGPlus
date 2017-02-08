@@ -22,14 +22,14 @@
         style="@style/AddButton"
         android:id="@+id/add_one_life"
         android:onClick="addLife"
-        android:text="+"/>
+        android:text="@string/add"/>
 
     <TextView
         android:id="@+id/life_amount"
-        style="@style/TextSize"
+        style="@style/NumberTextSize"
         android:layout_toLeftOf="@id/add_one_life"
         android:layout_toStartOf="@id/add_one_life"
-        android:text="40" />
+        android:text="@string/beginning_life" />
 
     <Button
         android:id="@+id/remove_one_life"
@@ -37,12 +37,13 @@
         android:layout_toLeftOf="@id/life_amount"
         android:layout_toStartOf="@id/life_amount"
         android:onClick="removeLife"
-        android:text="-"/>
+        android:text="@string/remove"/>
 
     <!-- ******************************************* -->
     <!-- Commander Deaths -->
     <!-- ******************************************* -->
     <TextView
+        android:id="@+id/cdeath_label"
         style="@style/TextSize"
         android:layout_below="@id/player_life_label"
         android:text="@string/commander_death" />
@@ -51,22 +52,56 @@
         style="@style/AddButton"
         android:id="@+id/add_one_cdeath"
         android:layout_below="@id/add_one_life"
-        android:onClick="addCommanderDeathCount"
-        android:text="+"/>
+        android:onClick="addCommanderDeath"
+        android:text="@string/add"/>
 
     <TextView
         android:id="@+id/cdeath_count"
-        style="@style/TextSize"
+        style="@style/NumberTextSize"
         android:layout_toLeftOf="@id/add_one_cdeath"
         android:layout_toStartOf="@id/add_one_cdeath"
         android:layout_below="@id/life_amount"
-        android:text="0" />
+        android:text="@string/beginning_death_count" />
 
     <Button
+        android:id="@+id/remove_one_cdeath"
         style="@style/ButtonSize"
         android:layout_below="@id/remove_one_life"
         android:layout_toLeftOf="@id/cdeath_count"
         android:layout_toStartOf="@id/cdeath_count"
         android:onClick="removeCommanderDeath"
-        android:text="-"/>
+        android:text="@string/remove"/>
+
+    <!-- ******************************************* -->
+    <!-- Experience -->
+    <!-- ******************************************* -->
+    <TextView
+        android:id="@+id/experience"
+        style="@style/TextSize"
+        android:layout_below="@id/cdeath_count"
+        android:text="@string/experience_label" />
+
+    <Button
+        android:id="@+id/add_experience"
+        style="@style/AddButton"
+        android:layout_below="@id/add_one_cdeath"
+        android:text="@string/add"
+        android:onClick="addExperience"/>
+
+    <TextView
+        android:id="@+id/experience_count"
+        style="@style/NumberTextSize"
+        android:layout_toLeftOf="@id/add_experience"
+        android:layout_toStartOf="@id/add_experience"
+        android:layout_below="@id/cdeath_count"
+        android:text="@string/beginning_experience" />
+
+    <Button
+        android:id="@+id/remove_experience"
+        style="@style/ButtonSize"
+        android:layout_toLeftOf="@id/experience_count"
+        android:layout_toStartOf="@id/experience_count"
+        android:layout_below="@id/remove_one_cdeath"
+        android:text="@string/remove"
+        android:onClick="removeExperience" />
 </RelativeLayout>

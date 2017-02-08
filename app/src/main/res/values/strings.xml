@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">MTGPlus</string>
     <string name="player_life">PLAYER LIFE</string>
-    <string name="commander_death">COM. DEATH</string>
+    <string name="commander_death">C DEATHS</string>
+    <string name="remove">-</string>
+    <string name="add">+</string>
+    <string name="beginning_life">40</string>
+    <string name="beginning_death_count">0</string>
+    <string name="experience_label">EXPERIENCE</string>
+    <string name="beginning_experience">0</string>
 </resources>
