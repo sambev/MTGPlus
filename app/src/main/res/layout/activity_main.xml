@@ -61,7 +61,7 @@
         android:layout_toLeftOf="@id/add_one_cdeath"
         android:layout_toStartOf="@id/add_one_cdeath"
         android:layout_below="@id/life_amount"
-        android:text="@string/beginning_death_count" />
+        android:text="@string/beginning_count" />
 
     <Button
         android:id="@+id/remove_one_cdeath"
@@ -94,7 +94,7 @@
         android:layout_toLeftOf="@id/add_experience"
         android:layout_toStartOf="@id/add_experience"
         android:layout_below="@id/cdeath_count"
-        android:text="@string/beginning_experience" />
+        android:text="@string/beginning_count" />
 
     <Button
         android:id="@+id/remove_experience"
@@ -104,4 +104,37 @@
         android:layout_below="@id/remove_one_cdeath"
         android:text="@string/remove"
         android:onClick="removeExperience" />
+
+    <!-- ******************************************* -->
+    <!-- COMMANDER DEATH -->
+    <!-- ******************************************* -->
+    <TextView
+        android:id="@+id/commander_damage_one"
+        style="@style/TextSize"
+        android:layout_below="@id/experience"
+        android:text="@string/commander_damage_label_one" />
+
+    <Button
+        android:id="@+id/add_commander_damage_one"
+        style="@style/AddButton"
+        android:layout_below="@id/add_experience"
+        android:onClick="addCommanderDamageOne"
+        android:text="@string/add" />
+
+    <TextView
+        style="@style/NumberTextSize"
+        android:id="@+id/commander_damage_one_count"
+        android:layout_below="@+id/experience_count"
+        android:layout_toLeftOf="@id/add_commander_damage_one"
+        android:layout_toStartOf="@id/add_commander_damage_one"
+        android:text="@string/beginning_count" />
+
+    <Button
+        style="@style/ButtonSize"
+        android:text="@string/remove"
+        android:layout_below="@id/remove_experience"
+        android:layout_toLeftOf="@id/commander_damage_one_count"
+        android:onClick="removeCommanderDamageOne"
+        android:layout_toStartOf="@id/commander_damage_one_count" />
+
 </RelativeLayout>

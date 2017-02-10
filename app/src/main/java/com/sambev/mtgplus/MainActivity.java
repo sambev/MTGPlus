@@ -67,4 +67,20 @@ public class MainActivity extends AppCompatActivity {
         TextView experienceView = (TextView) findViewById(R.id.experience_count);
         updateLife(experienceView, -1);
     }
+
+    /**
+     * Add an experience counter
+     */
+    public void addCommanderDamageOne(View view) {
+        TextView commanderDamageOneView = (TextView) findViewById(R.id.commander_damage_one_count);
+        updateLife(commanderDamageOneView, 1);
+    }
+
+    /**
+     * Remove experience counter
+     */
+    public void removeCommanderDamageOne(View view) {
+        TextView commanderDamageOneView = (TextView) findViewById(R.id.commander_damage_one_count);
+        updateLife(commanderDamageOneView, -1);
+    }
 }

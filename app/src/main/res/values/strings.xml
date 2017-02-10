@@ -5,7 +5,8 @@
     <string name="remove">-</string>
     <string name="add">+</string>
     <string name="beginning_life">40</string>
-    <string name="beginning_death_count">0</string>
     <string name="experience_label">EXPERIENCE</string>
-    <string name="beginning_experience">0</string>
+    <string name="beginning_count">0</string>
+    <string name="commander_damage_label_one">C DAMAGE 1</string>
+    <string name="commander_damage_label_two">C DAMAGE 2</string>
 </resources>
