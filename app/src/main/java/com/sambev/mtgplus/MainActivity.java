@@ -8,12 +8,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Counter lifeCounter = new Counter("life", 40);
+    Counter commanderDeaths = new Counter("commander_deaths", 0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         refreshView(R.id.life_amount, lifeCounter);
+        refreshView(R.id.cdeath_count, commanderDeaths);
     }
 
     private void updateLife(TextView view, int amount) {
@@ -52,16 +54,16 @@ public class MainActivity extends AppCompatActivity {
      * Add one to the commander death count
      */
     public void addCommanderDeath(View view) {
-        TextView commanderDeathView = (TextView) findViewById(R.id.cdeath_count);
-        updateLife(commanderDeathView, 1);
+        commanderDeaths.add(1);
+        refreshView(R.id.cdeath_count, commanderDeaths);
     }
 
     /**
      * Remove one life from life_amount view
      */
     public void removeCommanderDeath(View view) {
-        TextView commanderDeathView = (TextView) findViewById(R.id.cdeath_count);
-        updateLife(commanderDeathView, -1);
+        commanderDeaths.subtract(1);
+        refreshView(R.id.cdeath_count, commanderDeaths);
     }
 
     /**
