@@ -4,7 +4,6 @@
     <string name="commander_death">C DEATHS</string>
     <string name="remove">-</string>
     <string name="add">+</string>
-    <string name="beginning_life">40</string>
     <string name="experience_label">EXPERIENCE</string>
     <string name="beginning_count">0</string>
     <string name="commander_damage_label_one">C DAMAGE 1</string>

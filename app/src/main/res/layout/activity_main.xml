@@ -29,7 +29,7 @@
         style="@style/NumberTextSize"
         android:layout_toLeftOf="@id/add_one_life"
         android:layout_toStartOf="@id/add_one_life"
-        android:text="@string/beginning_life" />
+        android:text="@string/beginning_count" />
 
     <Button
         android:id="@+id/remove_one_life"
@@ -137,4 +137,15 @@
         android:onClick="removeCommanderDamageOne"
         android:layout_toStartOf="@id/commander_damage_one_count" />
 
+    <!-- ******************************************* -->
+    <!-- VIEW BUTTONS -->
+    <!-- ******************************************* -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="History"
+        android:onClick="viewHistory" />
 </RelativeLayout>
