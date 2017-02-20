@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     Counter lifeCounter = new Counter("life", 40);
     Counter commanderDeaths = new Counter("commander_deaths", 0);
     Counter experienceCounter = new Counter("experience", 0);
+    Counter commanderDamageCounter1 = new Counter("commander_damage_one", 0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +19,7 @@ public class MainActivity extends AppCompatActivity {
         refreshView(R.id.life_amount, lifeCounter);
         refreshView(R.id.cdeath_count, commanderDeaths);
         refreshView(R.id.experience_count, experienceCounter);
-    }
-
-    private void updateLife(TextView view, int amount) {
-        int currAmount = Integer.parseInt(view.getText().toString());
-        int newAmount = currAmount + amount;
-        view.setText(Integer.toString(newAmount));
+        refreshView(R.id.commander_damage_one_count, commanderDamageCounter1);
     }
 
     /**
@@ -88,16 +84,16 @@ public class MainActivity extends AppCompatActivity {
      * Add an experience counter
      */
     public void addCommanderDamageOne(View view) {
-        TextView commanderDamageOneView = (TextView) findViewById(R.id.commander_damage_one_count);
-        updateLife(commanderDamageOneView, 1);
+        commanderDamageCounter1.add(1);
+        refreshView(R.id.commander_damage_one_count, commanderDamageCounter1);
     }
 
     /**
      * Remove experience counter
      */
     public void removeCommanderDamageOne(View view) {
-        TextView commanderDamageOneView = (TextView) findViewById(R.id.commander_damage_one_count);
-        updateLife(commanderDamageOneView, -1);
+        commanderDamageCounter1.subtract(1);
+        refreshView(R.id.commander_damage_one_count, commanderDamageCounter1);
     }
 
     public void viewHistory(View view) {
