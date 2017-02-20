@@ -9,6 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Counter lifeCounter = new Counter("life", 40);
     Counter commanderDeaths = new Counter("commander_deaths", 0);
+    Counter experienceCounter = new Counter("experience", 0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         refreshView(R.id.life_amount, lifeCounter);
         refreshView(R.id.cdeath_count, commanderDeaths);
+        refreshView(R.id.experience_count, experienceCounter);
     }
 
     private void updateLife(TextView view, int amount) {
@@ -70,16 +72,16 @@ public class MainActivity extends AppCompatActivity {
      * Add an experience counter
      */
     public void addExperience(View view) {
-        TextView experienceView = (TextView) findViewById(R.id.experience_count);
-        updateLife(experienceView, 1);
+        experienceCounter.add(1);
+        refreshView(R.id.experience_count, experienceCounter);
     }
 
     /**
      * Remove experience counter
      */
     public void removeExperience(View view) {
-        TextView experienceView = (TextView) findViewById(R.id.experience_count);
-        updateLife(experienceView, -1);
+        experienceCounter.subtract(1);
+        refreshView(R.id.experience_count, experienceCounter);
     }
 
     /**
